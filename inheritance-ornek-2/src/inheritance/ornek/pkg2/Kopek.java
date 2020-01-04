@@ -34,6 +34,6 @@ public class Kopek extends Hayvan {
         System.out.println("Köpek koşuyor..");
 
         super.hareketeGec(hiz);
-        hareketeGec(hiz);
+        hareketeGec(hiz); //Override edilmiş metod
     }
 }

@@ -17,7 +17,7 @@ public class LinkedListOrnek2 {
                 System.out.println("Bu kelimeniz zaten listede var.");
                 return;
             }else if(karsilastir <0){
-                System.out.println("Yeni değer iterator.next'ten daha büyüktür");
+               // System.out.println("Yeni değer iterator.next'ten daha büyüktür");
             }else if(karsilastir>0){
                 iterator.previous();
                 iterator.add(yeni);

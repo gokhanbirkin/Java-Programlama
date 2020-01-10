@@ -16,7 +16,7 @@ public class StaticAnahtarKelimesi {
         System.out.println("Seyirci sayici : "+seyirci1.seyirciSayisi);*/
         System.out.println("Seyirci sayici : "+Seyirci.getSeyirciSayisi());
         //selamla();  //Oluşan bir static metodu olan mainden static olmayan bir metod çağıralamaz
-        
+        System.out.println(Math.PI);
     }
     
     public void selamla(){

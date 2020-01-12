@@ -126,3 +126,5 @@ hs_err_pid*
 /HashMapMain/build/
 /HashMapLinkedHashMapTreeMap/nbproject/private/
 /HashMapLinkedHashMapTreeMap/build/
+/HashCodeveEquals/nbproject/private/
+/HashCodeveEquals/build/

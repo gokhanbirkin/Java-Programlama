@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public class Baglanti {
     private String kullaniciAdi = "cafeApp";
-    private String parola = "şifre";
+    private String parola = "şifre...";
     private String dbIsmi = "app_db";
     private String host = "mysql11.turhost.com";
     private int port = 3306;
@@ -46,8 +46,24 @@ public class Baglanti {
         }
         
     }
+    public void MalzemeEkle(){
+        try {
+            statement = con.createStatement();
+            int zno = 77;
+            String zadi = "Karabiber";
+            String ztipi = "Baharat";
+            int zbirimFiyati = 25;
+            String sorgu = "Insert Into malzeme(zno,zadi,ztipi,zbirimFiyati) values('"+zno+"','"+zadi+"','"
+                    +ztipi+"','"+zbirimFiyati+"')";
+            statement.executeUpdate(sorgu);
+        } catch (SQLException ex) {
+            Logger.getLogger(Baglanti.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+    }
     public Baglanti(){
-        String url = "jdbc:mysql://"+host+":"+port+"/"+dbIsmi;
+        String url = "jdbc:mysql://"+host+":"+port+"/"+dbIsmi+"?useUnicode=true&characterEncoding=utf8";
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (Exception e) {
@@ -63,6 +79,8 @@ public class Baglanti {
     }
     public static void main(String args[]){
         Baglanti baglanti = new Baglanti();
+        baglanti.MalzemeEkle();
         baglanti.MalzemeleriGetir();
+        
     }
 }
